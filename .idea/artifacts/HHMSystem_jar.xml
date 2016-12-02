@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HHMSystem:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/HHMSystem_jar</output-path>
+    <root id="archive" name="HHMSystem.jar">
+      <element id="module-output" name="HHMSystem" />
+    </root>
+  </artifact>
+</component>
