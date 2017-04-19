@@ -1,8 +1,15 @@
-# HOPE HEALTH MANAGEMENT SYSTEM
+<img src="http://workandjam.com//foto/s190.jpg" /> <img src="http://friendsofgoodshepherd.org/images/fogs/FOGS-logo.png" />
+[![Build Status](https://travis-ci.org/openmrs/openmrs-core.svg?branch=master)](https://travis-ci.org/openmrs/openmrs-core)
 
-Hope (Teaching) Health Clinic is a privately operated organization that is governed by the friends of the Good Shepherd Foundation. This non-profitable organization provides health care to over 20,000 low income citizens of the north western region of Jamaica each year. The organization has existed for over 30 years and is now seeking ways to improve its service once again. 
-The main issues currently affecting the efficiency and the effectiveness of the services provided by HHC includes inefficient record retrieval, record keeping is space consuming and the generation of tedious financial reports. The current method of record keeping is paper – based. The clinic provides health care services to over 20,000 citizens as such it has been observed that frequent misplacement of the patients’ documents (dockets) has largely impacted the quality of service received by the patients.
-The intended users of the system are the receptionist, the nurse and the manager. The receptionist will use the system to create, update, search and schedule appointments for patients. The nurse will be able to update/modify patient's medical record. The manager will be able to authorize employee’s login information and view generated financial reports.
+# HOPE HEALTH MEDICAL SOLUTIONS
+
+## About
+
+Hope Health Clinic is a private operated organization that is governed by the friends of the [Good Shepherd Foundation](http://friendsofgoodshepherd.org/about-us) for over 30 years. This non-profitable organization provides health care to over 20,000 low income citizens of the north western region of Jamaica each year.The main issues currently affecting the efficiency and the effectiveness of the services provided by the clinic includes inefficient record retrieval, record keeping is space consuming and the generation of tedious financial reports. 
+
+## Mission
+
+Hope Health Medical Solutions is a patient terminal-based management system focusing on giving providers a free customizable electronic medical record system.The mission of OpenMRS is to improve health care delivery in resource-constrained environments by coordinating a global community that creates a robust, scalable, user-driven, open source medical record system platform.
 
 ## Getting Started
 
@@ -10,18 +17,63 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* Java IDE
-* Git
-* Windows/Linux/Mac OS
+* Java JDK 
+* Java IDE 
+* Git 
+* Windows/Linux/Mac 
 
-### Installing
+### Development
 
 See instructions to:
+
+- Install Java JDK [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
 - Install IntelliJ IDEA [here](https://www.jetbrains.com/help/idea/2017.1/installing-and-launching.html).
 
 - Use IntelliJ GitHub Integration [here](https://www.jetbrains.com/help/idea/2017.1/using-github-integration.html).
 
+
+### Deployment
+
+[on Linux]
+You will use the Java compiler `javac` to compile your Java programs and the Java interpreter `java` to run them.
+
+Check version:
+```
+$ javac -version
+javac 1.8.0_121
+
+$ java -version
+java version "1.8.0_111"
+Java(TM) SE Runtime Environment (build 1.8.0_111-b14)
+```
+Clone repo:
+```
+$ git clone https://github.com/superrcoop/HHMSystem.git
+```
+Navigate to directory:
+```
+$ cd HHMSystem/
+```
+Compile,create `.jar` file and run:
+```
+$ javac /src/_HHMSystem_/*.java
+```
+```
+$ jar cvfm HHMS.jar src/META-INF/MANIFEST.MF src/_HHMSystem_/*.class
+```
+```
+$ java -jar src/HHMS.jar
+```
+
+### Contributing
+
+Cheackout these useful guides:
+[Java SE 8 Oracle documentation](http://docs.oracle.com/javase/specs/jls/se8/html/index.html)
+[Java cheet sheet](http://mindprod.com/jgloss/jcheat.html)
+
+Contributions are very welcome, we can definitely use your help!
+
 ## Built With
 
 IntelliJ IDEA 2016.3
-
