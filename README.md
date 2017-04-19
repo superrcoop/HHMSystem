@@ -37,7 +37,8 @@ See instructions to:
 
 ### Deployment
 
-[on Linux]
+[On Linux]
+
 You will use the Java compiler `javac` to compile your Java programs and the Java interpreter `java` to run them.
 
 Check version:
