@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-* Java IDEA
+* Java IDE
 * Git
 * Windows/Linux/Mac OS
 
@@ -19,7 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 See instructions to:
 - Install IntelliJ IDEA [here](https://www.jetbrains.com/help/idea/2017.1/installing-and-launching.html).
 
-- Use IntelliJ Git tool to clone repo [here](https://www.jetbrains.com/help/idea/2017.1/cloning-a-repository-from-github.html).
+- Use IntelliJ GitHub Integration [here](https://www.jetbrains.com/help/idea/2017.1/using-github-integration.html).
 
 ## Built With
 
