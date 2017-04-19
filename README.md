@@ -7,11 +7,11 @@
 
 ### About
 
-Hope Health Clinic is a private operated organization that is governed by the friends of the [Good Shepherd Foundation](http://friendsofgoodshepherd.org/about-us) for over 30 years. This non-profitable organization provides health care to over 20,000 low income citizens of the north western region of Jamaica each year.The main issues currently affecting the efficiency and the effectiveness of the services provided by the clinic includes inefficient record retrieval, record keeping is space consuming and the generation of tedious financial reports. 
+Hope Health Clinic is a private operated organization that is governed by the friends of the [Good Shepherd Foundation](http://friendsofgoodshepherd.org/about-us) for over 35 years. This non-profitable organization provides health care to over 20,000 low income citizens of the north western region of Jamaica each year.The main issues currently affecting the efficiency and the effectiveness of the services provided by the clinic includes inefficient record retrieval, record keeping is space consuming and the generation of tedious financial reports. 
 
 ### Mission
 
-Hope Health Medical Solutions is a patient terminal-based management system focusing on giving providers a free customizable electronic medical record system.The mission of OpenMRS is to improve health care delivery in resource-constrained environments by coordinating a global community that creates a robust, scalable, user-driven, open source medical record system platform.
+Hope Health Medical Solution focuses on providing a free electronic medical record solution.The mission of HHMS is to improve health care delivery in resource-constrained environments with a robust, scalable, user-driven, open source medical record system platform.
 
 ## Getting Started
 
