@@ -1,4 +1,5 @@
-<img src="http://workandjam.com//foto/s190.jpg" /> <img src="http://friendsofgoodshepherd.org/images/fogs/FOGS-logo.png" />
+<img src="http://workandjam.com//foto/s190.jpg" />       <img src="http://friendsofgoodshepherd.org/images/fogs/FOGS-logo.png" />
+
 [![Build Status](https://travis-ci.org/openmrs/openmrs-core.svg?branch=master)](https://travis-ci.org/openmrs/openmrs-core)
 
 # HOPE HEALTH MEDICAL SOLUTIONS
