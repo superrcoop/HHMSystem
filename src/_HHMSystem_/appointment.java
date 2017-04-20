@@ -1,33 +1,38 @@
 package _HHMSystem_;
 
 /**
- * Created by superrcoop on 11/28/16.
+ * A class representing a appointment contained in the Hope Health Medical Solution.
+ * @author GROUP5
+ * @version 0.2.1
  */
+public class appointment {
 
-import java.io.*;
-import java.time.*;
-/*
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
-*/
-
-public class Appointment extends Patient {
-
-    String appDate,appTime;
-    String doc;
-    String visitDate,visitTime;
-    Double BloodPr,weight,height,temp;
-    String concern,diagnosis;
-    String drug,drugRefill;
+    private String appDate;
+    private String appTime;
+    private String doc;
+    private String visitDate;
+    private String visitTime;
+    private Double BloodPr;
+    private Double weight;
+    private Double height;
+    private Double temp;
+    private String concern;
+    private String diagnosis;
+    private String drug;
+    private String drugRefill;
 
 
-    // This is the constructor of the class
-    public Appointment(String fname,String lname,String appDate,String appTime,String doc){
+    /**
+     * Initialises an appointment
+     * @param fname
+     * @param lname
+     * @param
+     * @param
+     * @param
+     * @param
+     * @param
+     */
+    public appointment(String fname, String lname, String appDate, String appTime, String doc){
 
         super(fname,lname);
         this.appDate=appDate;
@@ -36,18 +41,6 @@ public class Appointment extends Patient {
 
     }
 
-    public Appointment(String fname,String lname,Double patientBP,Double weight,Double height,Double temp,String doc,
-                                  String concern,String diagnosis){
-
-        super(fname,lname);
-        this.BloodPr=patientBP;
-        this.weight=weight;
-        this.height=height;
-        this.temp=temp;
-        this.doc=doc;
-        this.concern=concern;
-        this.diagnosis=diagnosis;
-    }
 
     public void setApp_Time (String newAppTime){
         appTime=newAppTime;
@@ -57,11 +50,14 @@ public class Appointment extends Patient {
         appDate=newAppDate;
     }
 
+
+    //Appointment info
     public String getApp_Info(){
 
         return fname+" "+lname+"       "+appDate+"       "+appTime+"         "+doc + getApp_Status();
     }
 
+    //Calculate Appointment status
     public String getApp_Status(){
         String[] parts = appDate.split("-");
         int part1 = Integer.parseInt(parts[0]); // Day
@@ -87,6 +83,7 @@ public class Appointment extends Patient {
         this.drugRefill=drugRefill;
     }
 
+        //Results after patient visit
     public String getApp_Results(){
         return fname+" "+lname+"          "+ BloodPr+"      "+ weight+"       "+height+"        "+temp+"         "+ doc+ "     "+ concern+"      "+ diagnosis ;
     }

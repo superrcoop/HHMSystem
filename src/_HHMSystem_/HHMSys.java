@@ -1,22 +1,14 @@
 package _HHMSystem_;
 
-/**
- * Created by superrcoop on 11/28/16.
- */
-
-import java.util.*;
 import java.io.*;
-/*
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
- */
+import java.util.Scanner;
 
-class HHMSys {
+/**
+ * Class representing UI of the Medical system
+ * @author GROUP5
+ * @version 0.2.1
+ */
+public class HHMSys {
     Scanner scan = new Scanner(System.in);
     HHMSys() throws IOException {
         HHMS_header();
@@ -33,7 +25,7 @@ class HHMSys {
 
     public static void login() throws IOException {
         System.out.print("1-Receptionist Login \t 2-Manager Login \n" +
-                        "-------------------------------------------------------\nUser: ");
+                "-------------------------------------------------------\nUser: ");
         Scanner scan = new Scanner(System.in);
         int p = scan.nextInt();
         if (p==1){
@@ -54,10 +46,10 @@ class HHMSys {
 
     public static void menu(Scanner scan) throws IOException {
         System.out.println("Select an option: \n" +
-                        "  1) Patient Database\n" +
-                        "  2) Appointment System\n" +
-                        "  3) Report System \n" +
-                        "  0) Exit\n ");
+                "  1) Patient Database\n" +
+                "  2) Appointment System\n" +
+                "  3) Report System \n" +
+                "  0) Exit\n ");
         System.out.print("Enter option: ");
         int opt = scan.nextInt();
         switch (opt) {
@@ -85,7 +77,7 @@ class HHMSys {
         }
     }
     public static void patientMenu(Scanner scan) throws IOException {
-        Runtime.getRuntime().exec("clear");
+        Runtime.getRuntime().exec("clear"); //clear screen
         System.out.println("========================================================");
         System.out.println("=================== Patient Database ====================");
         System.out.println("=======================================================\n\n");
@@ -118,16 +110,16 @@ class HHMSys {
                 String phn_kin=scan.next();
                 System.out.println(" Do you wish to save? y or n");
                 if (scan.next().equalsIgnoreCase("y")){
-                    Patient newPatient = new Patient(fname, lname, dob, address, phn, job, name_kin, phn_kin);
+                    patient newPatient = new patient(fname, lname, dob, address, phn, job, name_kin, phn_kin);//new patient object
 
                     try {
-                        File file = new File("/home/superrcoop/Documents/patients.txt");
+                        File file = new File("/home/superrcoop/Documents/patients.txt");//create new file object
                         if (!file.exists()) {
-                            file.createNewFile();
+                            file.createNewFile();//create new file if files doesnt exist
                         }
                         BufferedWriter output = new BufferedWriter(new FileWriter(file));
-                        output.write(newPatient.toString());
-                        output.close();
+                        output.write(newPatient.toString()); //write to existing file
+                        output.close();//close bufferedwriter
                         System.out.println("\nsuccess writing..\n");
                     } catch (IOException e) {
                         e.printStackTrace();
@@ -143,9 +135,9 @@ class HHMSys {
                 int patientRec=1;
                 String sCurrentLine;
                 try {
-                    br = new BufferedReader(new FileReader("/home/superrcoop/Documents/patients.txt"));
-                    while ((sCurrentLine = br.readLine()) != null) {
-                        System.out.println(patientRec+" "+sCurrentLine);
+                    br = new BufferedReader(new FileReader("/home/superrcoop/Documents/patients.txt")); //Search for file
+                    while ((sCurrentLine = br.readLine()) != null) {       //read from file
+                        System.out.println(patientRec+" "+sCurrentLine); //Output patient info
                         patientRec++;
                     }
                     System.out.println("Do you want to edit patient data? y or n ");
@@ -155,7 +147,7 @@ class HHMSys {
                     e.printStackTrace();
                 } finally {
                     try {
-                        if (br != null) br.close();
+                        if (br != null) br.close(); //close bufferedwriter
                     } catch (IOException ex) {
                         ex.printStackTrace();
                     }
@@ -205,8 +197,8 @@ class HHMSys {
                         System.out.print("Please enter Doctor's name: ");
                         String doc=scan.next();
                         System.out.println("Do you wish to save patient appointment? y or n  ");
-                        if (scan.next().equalsIgnoreCase("y")){
-                            Appointment App = new Appointment(fname, lname, appDate,appTime,doc);
+                        if (scan.next().equalsIgnoreCase("y")){ //string compare
+                            appointment App = new appointment(fname, lname, appDate,appTime,doc);
                             try {
                                 File file = new File("/home/superrcoop/Documents/appointments.txt");
                                 if (!file.exists()) {
@@ -291,7 +283,7 @@ class HHMSys {
                         String diagn=scan.nextLine();
                         System.out.println("Do you wish to save? y or n ");
                         if (scan.next().equalsIgnoreCase("y")){
-                            Appointment visit = new Appointment(fname, lname,BP,w,h,t,doc,conc,diagn);
+                            appointment visit = new appointment(fname, lname,BP,w,h,t,doc,conc,diagn);
                             try {
                                 File file = new File("/home/superrcoop/Documents/visits.txt");
                                 if (!file.exists()) {
@@ -352,72 +344,7 @@ class HHMSys {
         menu(scan);
     }
 
-    public static void reportMenu(Scanner scan) throws  IOException{
-        Runtime.getRuntime().exec("clear");
-        System.out.println("==============================================================");
-        System.out.println("========================= Report System =======================");
-        System.out.println("===============================================================\n\n");
-        System.out.println(
-                "Select an option: \n" +
-                        "  1) Patient reports\n" +
-                        "  2) Financial reports\n" +
-                        "  0) Back to Login \n"
-        );
-        System.out.print("Enter Option: ");
-        int opt4 = scan.nextInt();
-        switch (opt4) {
-            case 1:
-                System.out.println("=====================================================PATIENT VISIT REPORT=======================================================\n ");
-                System.out.println("   Name                     BP      W      H      Tmp     Doctor               Concern                   Diagnosis \n " +
-                                "---------------------------------------------------------------------------------------------------------------------------------");
-                BufferedReader br = null;
-                int patientRec=1;
-                String sCurrentLine;
-                try {
-                    br = new BufferedReader(new FileReader("/home/superrcoop/Documents/visits.txt"));
-                    while ((sCurrentLine = br.readLine()) != null) {
-                        System.out.println(patientRec+" "+sCurrentLine);
-                        patientRec++;
-                    }
-
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } finally {
-                    try {
-                        if (br != null) br.close();
-                    } catch (IOException ex) {
-                        ex.printStackTrace();
-                    }
-                }
-                break;
-            case 2:
-                System.out.print("\n\t\t\tThere are no financial reports\n\n");
-                break;
-            case 0:
-                login();
-                break;
-            default:
-                System.out.println("Please select a valid choice.\n");
-                break;
-        }
-        System.out.print("Select: \n" +
-                        "1. Go Back to menu\n" +
-                        "2. Exit. \n" +
-                        "Option: ");
-        if (scan.nextInt()==1){
-            reportMenu(scan);
-
-        }else if (scan.nextInt()==2){
-            login();
-        }
-
-    }
 
 
-}
-public class HHMS {
-    public static void main(String[] args) throws IOException{
-        new HHMSys();
-    }
 
 }
