@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.api;
 
 import java.time.*;
 

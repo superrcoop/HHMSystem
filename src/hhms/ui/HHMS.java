@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.api;
 
 import java.io.*;
 import java.util.Scanner;
@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author GROUP5
  * @version 0.2.1
  */
-public class HHMSys {
+public class HHMSystem {
     Scanner scan = new Scanner(System.in);
     HHMSys() throws IOException {
         HHMS_header();
@@ -344,7 +344,11 @@ public class HHMSys {
         menu(scan);
     }
 
+}
 
-
+public class HHMS {
+    public static void main(String[] args) throws IOException{
+        new HHMSystem();
+    }
 
 }

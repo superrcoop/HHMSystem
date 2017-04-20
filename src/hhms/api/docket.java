@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.api;
 
 /**
  * A class representing a patient docket in the Medical system.

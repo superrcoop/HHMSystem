@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.ui;
 
 /**
  * A class representing appointment menu in the Medical system.

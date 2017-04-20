@@ -1,4 +1,7 @@
-package _HHMSystem_;
+package hhms;
+package ui;
+
+
 
 import java.io.BufferedReader;
 import java.io.FileReader;

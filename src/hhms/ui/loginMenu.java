@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.ui;
 
 /**
  * A class representing login Menu in the Medical system.

@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms.api;
 
 /**
  * A class representing a appointment contained in the Hope Health Medical Solution.

@@ -1,4 +1,4 @@
-package _HHMSystem_;
+package hhms;
 
 /**
  * A class representing a receptionist logging into the system.
