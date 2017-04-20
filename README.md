@@ -73,7 +73,7 @@ $ java -jar src/HHMS.jar
 
 Cheackout these useful guides:
 
-* [Java SE 8 Oracle documentation](http://docs.oracle.com/javase/specs/jls/se8/html/index.html)
+* [Java SE Oracle documentation](https://docs.oracle.com/javase/tutorial/index.html)
 
 * [Java cheet sheet](http://mindprod.com/jgloss/jcheat.html)
 
