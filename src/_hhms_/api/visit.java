@@ -1,4 +1,4 @@
-package hhms.api;
+package _hhms_.api;
 
 /**
  * Created by superrcoop on 4/19/17.

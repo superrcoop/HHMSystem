@@ -1,4 +1,4 @@
-package hhms;
+package _hhms_.api.user;
 
 /**
  * A class representing a receptionist logging into the system.

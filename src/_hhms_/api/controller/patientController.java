@@ -1,4 +1,4 @@
-package hhms.api.controller;
+package _hhms_.api.controller;
 
 /**
  * A class representing patient controll in the Medical system.

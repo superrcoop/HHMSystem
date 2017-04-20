@@ -1,4 +1,4 @@
-package hhms.api.log;
+package _hhms_.api.log;
 
 /**
  * A class representing a log in the Medical system.

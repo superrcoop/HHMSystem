@@ -1,4 +1,4 @@
-package hhms;
+package _hhms_;
 
 /**
  * A class representing a report Gerneration in the medical system.

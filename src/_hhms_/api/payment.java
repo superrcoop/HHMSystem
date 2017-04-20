@@ -1,4 +1,4 @@
-package hhms.api;
+package _hhms_.api;
 
 /**
  * A class representing a payment in the  Medical system.

@@ -1,4 +1,4 @@
-package hhms.api;
+package _hhms_.api;
 
 /**
  * A class representing Operations in the Medical system.

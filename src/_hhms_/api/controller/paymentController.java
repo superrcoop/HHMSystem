@@ -1,4 +1,4 @@
-package hhms;
+package _hhms_;
 
 /**
  * A class representing payment control in the Medical system.
