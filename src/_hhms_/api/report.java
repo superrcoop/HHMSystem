@@ -56,6 +56,11 @@ public class report {
         //implement me
     }
 
+    /**
+     * Overrides the toString method to return a string containing the report details.
+     * Used to populate the report contained in the Hope Health medical Solutions.
+     * @return report details
+     */
     @Override
     public String toString(){
         return nameOfReport+ "      " + dateOfReport+"     " + revenueCollected ;

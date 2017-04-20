@@ -7,4 +7,6 @@ package _hhms_.api.controller;
  */
 
 public class patientController {
+
+    public
 }

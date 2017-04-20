@@ -57,8 +57,9 @@ public class schedule {
     }
 
     /**
-     *Gets a schedule
-     * @return schedule
+     * Overrides the toString method to return a string containing the payment details.
+     * Used to populate the schedule contained in the Hope Health medical Solutions.
+     * @return scedule details
      */
     @Override
     public String toString(){

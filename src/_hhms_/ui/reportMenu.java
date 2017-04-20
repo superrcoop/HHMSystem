@@ -1,12 +1,11 @@
-package _hhms_;
-package ui;
+package _hhms_.ui;
 
-
-
+import _hhms_.api.HHMS;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
+
 
 /**
  * A class representing report Menu in the Medical system.
@@ -20,7 +19,7 @@ public class reportMenu {
      * @param scan
      * @throws IOException
      */
-    public static void reportMenu(Scanner scan) throws IOException {
+    public reportMenu(Scanner scan) throws IOException {
         //Runtime.getRuntime().exec("clear");
         System.out.println("==============================================================");
         System.out.println("========================= Report System =======================");
@@ -62,7 +61,7 @@ public class reportMenu {
                 System.out.print("\n\t\t\tThere are no financial reports\n\n");
                 break;
             case 0:
-                new login(new user());
+                //new login(new user());
                 break;
             default:
                 System.out.println("Please select a valid choice.\n");
@@ -73,10 +72,10 @@ public class reportMenu {
                 "2. Exit. \n" +
                 "Option: ");
         if (scan.nextInt()==1){
-            reportMenu(scan);
+            new reportMenu(scan);
 
         }else if (scan.nextInt()==2){
-            new login(new user());
+            //new login(new user());
         }
 
     }

@@ -21,12 +21,8 @@ public class payment {
      * @param date
      * @param price
      */
-    public payment(String fname,String lname,String operation,String date,double price){
-        this.fname=fname;
-        this.lname=lname;
-        this.operation=operation;
-        this.date=date;
-        this.price=price;
+    public payment(Operation operation){
+
     }
 
     /**

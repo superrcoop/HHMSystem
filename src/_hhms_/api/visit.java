@@ -1,15 +1,38 @@
 package _hhms_.api;
 
 /**
- * Created by superrcoop on 4/19/17.
+ * A class representing appointment menu in the Medical system.
+ * @author GROUP5
+ * @version 0.2.1
  */
 public class visit {
 
-    // This is the constructor for the patient visits
-    public appointment(String fname, String lname, Double patientBP, Double weight, Double height, Double temp, String doc,
+    private String fname;
+    private String lname;
+    private Double patientBP;
+    private Double weight;
+    private Double height;
+    private Double temp;
+    private String doc;
+    private String concern;
+    private String diagnosis;
+
+    /**
+     * Initialises a patient visit in the Medical system
+     * @param fname
+     * @param lname
+     * @param patientBP
+     * @param weight
+     * @param height
+     * @param temp
+     * @param doc
+     * @param concern
+     * @param diagnosis
+     */
+    public visit(String fname, String lname, Double patientBP, Double weight, Double height, Double temp, String doc,
                        String concern, String diagnosis){
 
-        this.BloodPr=patientBP;
+        this.patientBP=patientBP;
         this.weight=weight;
         this.height=height;
         this.temp=temp;
@@ -17,4 +40,6 @@ public class visit {
         this.concern=concern;
         this.diagnosis=diagnosis;
     }
+
+
 }

@@ -1,5 +1,8 @@
 package _hhms_.api;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 /**
  * A class representing a appointment contained in the Hope Health Medical Solution.
  * @author GROUP5
@@ -26,11 +29,9 @@ public class appointment {
      * Initialises an appointment
      * @param fname
      * @param lname
-     * @param
-     * @param
-     * @param
-     * @param
-     * @param
+     * @param appDate;
+     * @param appTime;
+     * @param doc
      */
     public appointment(String fname, String lname, String appDate, String appTime, String doc){
 
@@ -41,23 +42,26 @@ public class appointment {
 
     }
 
-
+    /**
+     * Sets appointment time
+     * @param newAppTime
+     */
     public void setApp_Time (String newAppTime){
         appTime=newAppTime;
     }
 
+    /**
+     * Set appointment date
+     * @param newAppDate
+     */
     public void setApp_date(String newAppDate){
         appDate=newAppDate;
     }
 
-
-    //Appointment info
-    public String getApp_Info(){
-
-        return fname+" "+lname+"       "+appDate+"       "+appTime+"         "+doc + getApp_Status();
-    }
-
-    //Calculate Appointment status
+    /**
+     * Calculate Appointment status
+     * @return status
+     */
     public String getApp_Status(){
         String[] parts = appDate.split("-");
         int part1 = Integer.parseInt(parts[0]); // Day
@@ -78,13 +82,23 @@ public class appointment {
 
     }
 
+    /**
+     * Set prescription
+     * @param drug
+     * @param drugRefill
+     */
     public void setPrescription(String drug,String drugRefill){
         this.drug=drug;
         this.drugRefill=drugRefill;
     }
 
-        //Results after patient visit
-    public String getApp_Results(){
+    /**
+     * Overrides the toString method to return a string containing the appointment details.
+     * Used to populate the appointments contained in the Hope Health medical Solutions.
+     * @return appointment details
+     */
+    @Override
+    public String toString(){
         return fname+" "+lname+"          "+ BloodPr+"      "+ weight+"       "+height+"        "+temp+"         "+ doc+ "     "+ concern+"      "+ diagnosis ;
     }
 }
