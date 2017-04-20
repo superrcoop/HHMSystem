@@ -39,7 +39,7 @@ See instructions to:
 
 [On Linux]
 
-You will use the Java compiler `javac` to compile your Java programs and the Java interpreter `java` to run them.
+You will use `git` the Java compiler `javac` to compile your Java programs and the Java interpreter `java` to run them,assuming already installed. 
 
 Check version:
 ```
@@ -73,9 +73,11 @@ $ java -jar src/HHMS.jar
 
 Cheackout these useful guides:
 
-* [Java SE 8 Oracle documentation](http://docs.oracle.com/javase/specs/jls/se8/html/index.html)
+* [Java SE Oracle documentation](https://docs.oracle.com/javase/tutorial/index.html)
 
 * [Java cheet sheet](http://mindprod.com/jgloss/jcheat.html)
+
+* [Github cheet sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf)
 
 Contributions are very welcome, we can definitely use your help!
 
