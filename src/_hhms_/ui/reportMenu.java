@@ -22,21 +22,21 @@ public class reportMenu {
     public reportMenu(Scanner scan) throws IOException {
         //Runtime.getRuntime().exec("clear");
         System.out.println("==============================================================");
-        System.out.println("========================= Report System =======================");
-        System.out.println("===============================================================\n\n");
+        System.out.println("========================= Report System ======================");
+        System.out.println("==============================================================\n\n");
         System.out.println(
                 "Select an option: \n" +
-                        "  1) Patient reports\n" +
-                        "  2) Financial reports\n" +
+                        "  1) Generate Patient reports\n" +
+                        "  2) Generating Financial reports\n" +
                         "  0) Back to Login \n"
         );
         System.out.print("Enter Option: ");
         int opt4 = scan.nextInt();
         switch (opt4) {
             case 1:
-                System.out.println("=====================================================PATIENT VISIT REPORT=======================================================\n ");
-                System.out.println("   Name                     BP      W      H      Tmp     Doctor               Concern                   Diagnosis \n " +
-                        "---------------------------------------------------------------------------------------------------------------------------------");
+                System.out.println("==========================PATIENT VISIT REPORT=====================\n ");
+                System.out.println(" Name         BP  W  H  Tmp  Doctor  Concern   Diagnosis \n " +
+                                   "--------------------------------------------------------------------");
                 BufferedReader br = null;
                 int patientRec=1;
                 String sCurrentLine;
@@ -46,7 +46,7 @@ public class reportMenu {
                         System.out.println(patientRec+" "+sCurrentLine);
                         patientRec++;
                     }
-
+                    new reportMenu(scan);
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
@@ -61,7 +61,7 @@ public class reportMenu {
                 System.out.print("\n\t\t\tThere are no financial reports\n\n");
                 break;
             case 0:
-                //new login(new user());
+                new HHMS();
                 break;
             default:
                 System.out.println("Please select a valid choice.\n");
@@ -75,7 +75,7 @@ public class reportMenu {
             new reportMenu(scan);
 
         }else if (scan.nextInt()==2){
-            //new login(new user());
+            new HHMS();
         }
 
     }

@@ -4,6 +4,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 import _hhms_.api.HHMS;
+import _hhms_.api.user.manager;
+import _hhms_.api.user.receptionist;
+import _hhms_.api.user.user;
+
 import static _hhms_.api.HHMS.HHMS_header;
 
 /**
@@ -19,21 +23,28 @@ public class loginMenu{
      * @throws IOException
      */
     public loginMenu(Scanner scan) throws IOException{
-        //clear screen
+        //Runtime.getRuntime().exec("cls");
         HHMS_header();
-        System.out.print("1-Receptionist Login \t 2-Manager Login \n" +
-                "-------------------------------------------------------\nUser: ");
-        scan = new Scanner(System.in);
-        int p = scan.nextInt();
-        if (p==1){
-            HHMS_header();
+        user usr=new user();
+        receptionist recep=new receptionist();
+        manager man=new manager();
+        System.out.print("-------\n"+
+                         "User:");
+        String in=scan.nextLine();
+        if (in.equalsIgnoreCase(recep.username)){
+            System.out.println("Password:");
+            in =scan.next();
+
             System.out.println("\n\tUser: Receptionist \n" +
-                    "--------------------------------------------------\n");
-            new HHMS(scan);
-        }else if(p==2){
+                               "---------------------------\n");
+
+        }else if(in.equalsIgnoreCase(man.username)){
+            System.out.println("Password:");
+            in =scan.next();
             HHMS_header();
-            System.out.println("\n\tUser: Manager\n"+
-                    "---------------------------------------------------\n");
+            System.out.println("-------------------------" +
+                               "User: Manager\n"+
+                               "-------------------------\n");
             new reportMenu(scan);
         }else{
             System.out.print("\nPlease select a valid user..\n");

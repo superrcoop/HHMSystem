@@ -11,8 +11,12 @@ import java.util.Scanner;
  */
 public class HHMS{
 
-    public HHMS(Scanner scan) throws IOException {
-
+    /**
+     * Initiates Medical system
+     * @throws IOException
+     */
+    public HHMS() throws IOException {
+        Scanner scan = new Scanner(System.in);
         new loginMenu(scan);
 
         System.out.println("Select an option: \n" +
@@ -41,20 +45,29 @@ public class HHMS{
                 System.exit(0);
                 break;
             default:
-                System.out.println("Please select a valid option.. \n");
+                System.out.println("Please select a valid option.. \n\n");
                 HHMS_header();
-                new HHMS(scan);
+                new HHMS();
         }
     }
 
     public static void HHMS_header() {
-        //Welcome message
-        System.out.println("Welcome to the Hope Health Medical System");
+        System.out.println("---------------------------------------------\n"+
+                            "  Welcome to the Hope Health Medical System\n"+
+                           "---------------------------------------------\n\n");
     }
 
-    public static void main(String[] args) throws IOException{
-        Scanner scan = new Scanner(System.in);
-        new HHMS(scan);
+
+    public static void main(String[] args) throws IOException {
+
+        try{
+            new HHMS();
+        }catch(Exception e){
+            System.out.println(e);
+        }finally {
+            System.out.println("\n\nBuild sucessfull..");
+        }
+
     }
 
 }

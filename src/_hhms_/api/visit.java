@@ -135,7 +135,6 @@ public class visit {
     @Override
     public String toString(){
             //convert all variables to String
-        return "";
-    }  
-
+        return patientId+"\t\t"+patientBP+"\t\t"+weight+"\t\t"+height+"\t\t"+temp+"\t\t"+doc+"\t\t"+medicalCon+"\t\t"+operation;
+    }
 }

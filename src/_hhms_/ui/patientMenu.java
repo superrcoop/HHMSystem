@@ -19,9 +19,9 @@ public class patientMenu {
      * @throws IOException
      */
     public patientMenu(Scanner scan) throws IOException {
-        //Runtime.getRuntime().exec("clear"); //clear screen
-        System.out.println("========================================================");
-        System.out.println("=================== Patient Database ====================");
+        //Runtime.getRuntime().exec("clear");
+        System.out.println("\n\n=======================================================");
+        System.out.println("=================== Patient Database ==================");
         System.out.println("=======================================================\n\n");
         System.out.println(
                 "Select an option: \n" +
@@ -33,25 +33,29 @@ public class patientMenu {
         int opt2 = scan.nextInt();
         switch (opt2) {
             case 1:
-                System.out.print("Pleased enter the first name of the patient: ");
+                System.out.println("Enter patient ID: ");
+                String id=scan.next();
+                System.out.print("Enter the first name of the patient: ");
                 String fname = scan.next();
-                System.out.print("Pleased enter the last name of the patient: ");
+                System.out.print("Enter the last name of the patient: ");
                 String lname = scan.next();
-                System.out.print("Please enter the date of birth of the patient [dd-mm-yyyy]: ");
+                System.out.print("Enter the date of birth of the patient [dd-mm-yyyy]: ");
                 String dob = scan.next();
-                System.out.print("Please enter the address of the patient: ");
+                System.out.print("Enter the address of the patient: ");
                 String address = scan.next();
-                System.out.print("Please enter the phone number of the patient [000-000-0000] : ");
+                System.out.print("Enter the phone number of the patient [000-000-0000] : ");
                 String phn = scan.next();
-                System.out.print("Please enter the job of the patient: ");
+                System.out.print("Enter the job of the patient: ");
                 String job = scan.next();
-                System.out.print("Please enter the next of kin's name: ");
+                System.out.print("Enter the next of kin's name: ");
                 String name_kin = scan.next();
-                System.out.print("Please enter the next of kin's phone number [000-000-0000] : ");
+                System.out.print("Enter the next of kin's phone number [000-000-0000] : ");
                 String phn_kin = scan.next();
-                System.out.println(" Do you wish to save? y or n");
+                System.out.println("Enter medical condition: ");
+                String medCon=scan.next();
+                System.out.println("Do you want to save? ");
                 if (scan.next().equalsIgnoreCase("y")) {
-                    patient newPatient = new patient(fname, lname);//new patient object
+                    patient newPatient = new patient(id,fname, lname,dob, address,phn,job,name_kin,phn_kin);//new patient object
 
                     try {
                         File file = new File("/home/superrcoop/Documents/patients.txt");//create new file object
@@ -62,6 +66,7 @@ public class patientMenu {
                         output.write(newPatient.toString()); //write to existing file
                         output.close();//close bufferedwriter
                         System.out.println("\nsuccess writing..\n");
+                        new patientMenu(scan);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -69,20 +74,21 @@ public class patientMenu {
                 break;
 
             case 2:
-                System.out.println("========================================PATIENT SEARCH=====================================================\n ");
-                System.out.println("   Name               D.O.B     Age    Phone number        Address               Emergency contact\n " +
-                        "--------------------------------------------------------------------------------------------------------------");
+                System.out.println("=====================================PATIENT SEARCH======================================\n ");
+                System.out.println(" Name         D.O.B   Age  Phone number  Address       Emergency contact    Medical Conition        Bill          Comments\n " +
+                                   "----------------------------------------------------------------------------------------------");
                 BufferedReader br = null;
                 int patientRec = 1;
                 String sCurrentLine;
                 try {
                     br = new BufferedReader(new FileReader("/home/superrcoop/Documents/patients.txt")); //Search for file
                     while ((sCurrentLine = br.readLine()) != null) {       //read from file
-                        System.out.println(patientRec + " " + sCurrentLine); //Output patient info
+                        System.out.println(patientRec + "\t\t" + sCurrentLine); //Output patient info
                         patientRec++;
                     }
                     System.out.println("Do you want to edit patient data? y or n ");
                     scan.next();
+                    new patientMenu(scan);
 
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -95,7 +101,7 @@ public class patientMenu {
                 }
                 break;
             case 0:
-                new HHMS(scan);
+                new HHMS();
                 break;
             default:
                 System.out.println("Please select a valid choice.\n");

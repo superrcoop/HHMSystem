@@ -15,10 +15,10 @@ import java.util.Scanner;
 public class appointmentMenu {
 
     public appointmentMenu(Scanner scan) throws IOException {
-        Runtime.getRuntime().exec("clear");
+        //Runtime.getRuntime().exec("clear");
         System.out.println("===============================================================");
         System.out.println("====================== Appointment System ====================");
-        System.out.println("===========================================================\n\n");
+        System.out.println("==============================================================\n\n");
         System.out.println(
                 "Select an option: \n" +
                         "  1) Patient appointments\n" +
@@ -37,7 +37,7 @@ public class appointmentMenu {
                 int opt5 = scan.nextInt();
                 switch (opt5) {
                     case 1:
-                        System.out.println("============================Appointments==============================");
+                        System.out.println("===============Appointments======================");
                         System.out.print("Please enter the first name of the patient: ");
                         String fname = scan.next();
                         System.out.print("Please enter the last name of the patient: ");
@@ -69,9 +69,9 @@ public class appointmentMenu {
 
                         break;
                     case 2:
-                        System.out.println("==========================================APPOINTMENT SEARCH========================================\n ");
-                        System.out.println("   Name                   Date          Time         Doctor            Status\n " +
-                                "---------------------------------------------------------------------------------------------------");
+                        System.out.println("=================APPOINTMENT SEARCH===========================\n ");
+                        System.out.println("   Name           Date        Time      Doctor      Status\n " +
+                                           "---------------------------------------------------------------");
                         BufferedReader br = null;
                         int patientRec = 1;
                         String sCurrentLine2;
@@ -114,7 +114,7 @@ public class appointmentMenu {
                 int opt6 = scan.nextInt();
                 switch (opt6) {
                     case 1:
-                        System.out.println("===============================Visits===============================");
+                        System.out.println("======================Visits========================");
                         System.out.print("Pleased enter the patient ID: ");
                         String id = scan.next();
                         System.out.print("Pleased enter the first name of the patient: ");
@@ -132,12 +132,12 @@ public class appointmentMenu {
                         System.out.print("Please enter doc: ");
                         String doc = scan.next();
                         System.out.print("Please enter concern: ");
-                        String conc = scan.nextLine();
+                        String conc = scan.next();
                         System.out.print("Please enter diagnosis: ");
-                        String diagn = scan.nextLine();
+                        String diagn = scan.next();
                         System.out.println("Do you wish to save? y or n ");
                         if (scan.next().equalsIgnoreCase("y")) {
-                            visit visit=new visit(fname,lname,conc,doc);
+                            visit visit=new visit(id,BP,w,h,t,doc,conc,diagn);
                             try {
                                 File file = new File("/home/superrcoop/Documents/visits.txt");
                                 if (!file.exists()) {
@@ -147,6 +147,7 @@ public class appointmentMenu {
                                 output.write(visit.toString());
                                 output.close();
                                 System.out.println("\nsuccess writing..");
+                                new patientMenu(scan);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -155,9 +156,9 @@ public class appointmentMenu {
                         break;
 
                     case 2:
-                        System.out.println("====================================================VISIT SEARCH==========================================================\n ");
-                        System.out.print("   Name                BP     W(lbs)     H(ft)    Tmp(Degrees)      Doctor                 Concern                     Diagnosis\n " +
-                                "-------------------------------------------------------------------------------------------------------------------------------\n");
+                        System.out.println("===========================VISIT SEARCH============================================\n ");
+                        System.out.print(" Name          BP   W(lbs)   H(ft)   Tmp(Degrees)  Doctor      Concern    Diagnosis\n " +
+                                        "------------------------------------------------------------------------------------\n");
                         BufferedReader br = null;
                         int patientRec = 1;
                         String sCurrentLine;
@@ -169,6 +170,7 @@ public class appointmentMenu {
                             }
                             System.out.println("Do you want to edit patient visit? y or n ");
                             scan.next();
+                            new patientMenu(scan);
                         } catch (IOException e) {
                             e.printStackTrace();
                         } finally {
@@ -188,7 +190,7 @@ public class appointmentMenu {
                 }
                 break;
             case 0:
-                new HHMS(scan);
+                new HHMS();
                 break;
             default:
                 System.out.println("Please select a valid choice.\n");
