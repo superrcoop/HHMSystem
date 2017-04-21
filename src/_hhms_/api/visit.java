@@ -6,9 +6,7 @@ package _hhms_.api;
  * @version 0.2.1
  */
 public class visit {
-
-    private String fname;
-    private String lname;
+    private String patientid;
     private Double patientBP;
     private Double weight;
     private Double height;
@@ -16,6 +14,7 @@ public class visit {
     private String doc;
     private String concern;
     private String diagnosis;
+    private Prescription prescription;
 
     /**
      * Initialises a patient visit in the Medical system
@@ -29,9 +28,8 @@ public class visit {
      * @param concern
      * @param diagnosis
      */
-    public visit(String fname, String lname, Double patientBP, Double weight, Double height, Double temp, String doc,
-                       String concern, String diagnosis){
-
+    public visit(String patientid, Double patientBP, Double weight, Double height, Double temp, String doc,
+                       String concern, String diagnosis,Prescription prescriptionid){
         this.patientBP=patientBP;
         this.weight=weight;
         this.height=height;
@@ -39,7 +37,11 @@ public class visit {
         this.doc=doc;
         this.concern=concern;
         this.diagnosis=diagnosis;
+        this.prescription=prescription;
     }
-
+    
+    public String toString(){
+        return patientid+" "+patientBP+" "+weight+" "+height+" "+temp+" "+doc" "+concern+" "+diagnosis+" "+prescription.toString();
+    }  
 
 }
