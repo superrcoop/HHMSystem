@@ -9,6 +9,8 @@ import java.time.*;
  */
 public class patient {
 
+    
+    private String patientid
     private String fname;
     private String lname;
     private int age;
@@ -80,6 +82,11 @@ public class patient {
      * Gets the first name of a patient.
      * @return The first name of a patient.
      */
+    
+    public String getpatientID() {
+        return patientid;
+    }
+    
     public String getFirstName() {
         return fname;
     }
@@ -115,38 +122,6 @@ public class patient {
      */
     public String getPhoneNumber() {
         return phnum;
-    }
-
-    /**
-     * Gets the billing of a patient.
-     * @return The billing of a patient.
-     */
-    public double getBilling() {
-        return bill;
-    }
-
-    /**
-     * Gets the doctor of a patient.
-     * @return The doctor of a patient.
-     */
-    public String getDoctor() {
-        return doc;
-    }
-
-    /**
-     * Gets the appointments of a patient.
-     * @return The appointments of a patient.
-     */
-    public String getAppointments() {
-        return appointment;
-    }
-
-    /**
-     * Sets the appointments of a patient.
-     * @param appointments The appointments of a patient.
-     */
-    public void setAppointments(String appointments) {
-        this.appointment = appointments;
     }
 
     /**
