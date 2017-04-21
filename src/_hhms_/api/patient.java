@@ -19,11 +19,7 @@ public class patient {
     private String nexKName;
     private String nexxPhnum;
     private String medicalCon;
-    private String bill;
-    private String doc;
     private String comments;
-    private String appointment;
-
 
     /**
      * Initialises a patient with ALL personal details
