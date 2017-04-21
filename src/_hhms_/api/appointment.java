@@ -12,20 +12,23 @@ public class appointment {
 
     private String appDate;
     private String appTime;
-    private String patientid;
     private String doc;
-    private String reason;
+    private String patientId;
+    private String operation;
+
+    public String DOCTOR_1="Dave Brown";
+    public String DOCTOR_2="Chalice Original";
 
     /**
      * Initialises an appointment
-     * @param patientid
+     * @param patientId
      * @param appDate;
      * @param appTime;
      * @param doc
      */
-    public appointment(String patienid, String appDate,String reason, String appTime, String doc){
-        this.patientid=patientid;
-        this.reason=reason;
+    public appointment(String patientId, String appDate,String operation, String appTime, String doc){
+        this.patientId=patientId;
+        this.operation=operation;
         this.appDate=appDate;
         this.appTime=appTime;
         this.doc=doc;
@@ -46,15 +49,27 @@ public class appointment {
     public void reschApp_date(String newAppDate){
         this.appDate=newAppDate;
     }
-    
-    public String getreason(){
-        return this.reason;
+
+    /**
+     * Gets patient operation
+     * @return
+     */
+    public String getOperation(){
+        return operation;
     }
-    
+
+    /**
+     * Get appointment date
+     * @return
+     */
     public String getappDate(){
         return this.appDate;
     }
-    
+
+    /**
+     * Get appointment Time
+     * @return
+     */
     public String getappTime(){
         return this.appTime;
     }
@@ -89,6 +104,6 @@ public class appointment {
      */
     @Override
     public String toString(){
-        return patientid+" "+appDate+"          "+appTime+"      "+ reason+"       "+doc;
+        return patientId+"\t\t"+appDate+"\t\t"+appTime+"\t\t"+ operation+"\t\t"+doc;
     }
 }

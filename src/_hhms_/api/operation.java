@@ -41,17 +41,22 @@ public class operation {
      * Gets a the operations for a patient
      * @return operation
      */
-    public getOperation(){
-        return operation;
-    }
+    public String getOperation(){ return operation;}
 
     /**
      * Sets the operation Status for a patient
      */
     public void setOperation(){
-        //implement me
+        //...
     }
 
+    /**
+     * Gets all operation
+     * @return all operations
+     */
+    public void getAllOperations(){
+        //...
+    }
 
 }
 

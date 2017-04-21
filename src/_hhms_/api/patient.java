@@ -10,7 +10,7 @@ import java.time.*;
 public class patient {
 
     
-    private String patientid
+    private String id;
     private String fname;
     private String lname;
     private int age;
@@ -29,18 +29,18 @@ public class patient {
      * @param lname
      * @param addr
      * @param dateOB
-     * @param age
      * @param job
      * @param nexKName
      * @param nexxPhnum
      * @param phnum
      */
-    public patient(String fname, String lname, String dateOB, String age, String addr,
+    public patient(String id, String fname, String lname, String dateOB, String addr,
                    String phnum, String job, String nexKName, String nexxPhnum){
+        this.id=id;
         this.fname=fname;
         this.lname=lname;
         this.dateOB=dateOB;
-        this.age=age;
+        this.age=getAge();
         this.addr=addr;
         this.phnum=phnum;
         this.job=job;
@@ -56,9 +56,7 @@ public class patient {
     public patient(String fname, String lname){
         this.fname=fname;
         this.lname=lname;
-
     }
-
 
     /**
      * Gets the persons age.
@@ -72,19 +70,15 @@ public class patient {
         int part3 = Integer.parseInt(parts[2]); // Year
         LocalDate today = LocalDate.now(); // Today's Date
         LocalDate birthday = LocalDate.of(part3, part2, part1);
-        if (age != Period.between(birthday, today).getYears()){
-            return False;
-        }
         return age;
     }
 
     /**
-     * Gets the first name of a patient.
-     * @return The first name of a patient.
+     * Gets the patient ID.
+     * @return patient id
      */
-    
     public String getpatientID() {
-        return patientid;
+        return id;
     }
     
     public String getFirstName() {
@@ -125,12 +119,36 @@ public class patient {
     }
 
     /**
+     * Sets the phone number of a patient.
+     */
+    public void setPhoneNumber(String phnum){
+        this.phnum=phnum;
+    }
+
+    /**
+     * Gets patient medical condition
+     * @return medical condition
+      */
+    public String getMedicalCondition(){
+        return medicalCon;
+    }
+
+    /**
+     * Set patent medical condition
+     * @param condition
+     */
+    public void setMedicalCondition(String condition){
+        this.medicalCon=condition;
+    }
+
+    /**
      * Overrides the toString method to return a string containing the first and last name of a patient.
      * Used to populate the list of patients contained in the Hope Health medical Solutions.
      * @return A string containing the patient data
      */
     @Override
     public String toString(){
-        return fname + " " + lname + "     " + dateOB + "    " + getAge()+"    " +phnum + "    "+addr+"    "+ nexKName +" "+ nexxPhnum;
+        return id+"\t\t"+fname + " " + lname + "\t\t" + dateOB + "\t\t" + getAge()+"\t\t" +phnum +
+                "\t\t"+addr+"\t\t"+ nexKName +"\t\t"+ nexxPhnum+"\t\t"+comments;
     }
 }

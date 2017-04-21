@@ -14,22 +14,17 @@ public class payment {
     private String bill;
 
     /**
-     * Initialises a new pament
-     * @param fname
-     * @param lname
-     * @param operation
-     * @param date
-     * @param price
+     * Initialises a new payment
+     * @param Operation
      */
-    public payment(Operation operation){
-
+    public payment(operation Operation){
+        this.operation=Operation
     }
 
     /**
      * Get the name of the person making the payment
      * @return name
      */
-
     public String getName(){
         return fname + " " +lname;
     }
@@ -65,6 +60,6 @@ public class payment {
      */
     @Override
     public String toString(){
-        return getName() + " " + date + " " + price ;
+        return getName() + "\t\t" + date + "\t\t" + price ;
      }
 }

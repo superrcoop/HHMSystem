@@ -7,14 +7,31 @@ package _hhms_.api;
  */
 public class bill {
 
-
+    private double bill;
+    /**
+     * Initialises a new bill
+     * @param Operation
+     */
     public bill(operation Operation){
-
+        // ...
     }
 
-    public getBill(){
-
+    /**
+     * Calculate medical bill
+     * @return bill
+     */
+    public void calclateBill(){
+        //implement me
     }
 
-    public
+    /**
+     * Overrides the toString method to return a string containing the bill details.
+     * Used to populate the appointments contained in the Hope Health medical Solutions.
+     * @return bill details
+     */
+    @Override
+    public String toString(){
+        // convert double to string
+        return "";
+    }
 }

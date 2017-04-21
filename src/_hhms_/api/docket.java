@@ -2,6 +2,8 @@ package _hhms_.api;
 import _hhms_.api.patient;
 import _hhms_.api.visit;
 
+import java.util.ArrayList;
+
 /**
  * A class representing a patient docket in the Medical system.
  * @author GROUP5
@@ -11,24 +13,21 @@ public class docket {
 
     public ArrayList visitlog;
     public patient Patient;
-    
 
     /**
      * Initialises a docket for a patient in the Medical System
      * @param Patient
-     * @param Visit
      */
     public docket(patient Patient){
         this.Patient=Patient;
-        ArrayList<Visit> visitlog = new ArrayList<Visit> ();
+        ArrayList<visit> visitlog = new ArrayList<visit> ();
     }
 
     /**
      * Gets a patient visit from a docket
      * @return visit
      */
-    
-    public void(Visit v){
+    public void addVisit(visit v){
         visitlog.add(v);
     }
 
@@ -36,13 +35,16 @@ public class docket {
      * Get a patient from the docket;
      * @return patient
      */
-    public patient getPatientdetials(){
+    public String getPatientdetials(){
         return Patient.toString();
     }
-    
-   public String toString(){
-        for (Visit obj:visitlog){
-             System.out.println(obj);
-        }
+
+    /**
+     * Print the contents of a a docket
+     * @return
+     */
+    @Override
+    public String toString(){
+        return "";
    }
 }

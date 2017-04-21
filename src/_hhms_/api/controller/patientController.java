@@ -10,24 +10,48 @@ import _hhms_.api.patient;
 
 public class patientController {
 
+        private patient Patient;
+
+    /**
+     * Initialises patient controll in the Medical System
+     * @param Patient
+     */
     public patientController(patient Patient){
-
+        this.Patient=Patient;
     }
 
+    /**
+     * Get a patient
+     * @return patient
+     */
     public getPatient(){
-
+        return Patient;
     }
 
+    /**
+     * Gets a patient docket
+     * @return docket
+     */
     public getDocket(){
-
+        //implement me
     }
 
+    /**
+     * Add patient to register
+     *
+     */
     public addToRegister(){
-
+        //implement me
     }
 
     public scheduleAppointment(){
 
     }
-    public
+    public cancelAppointment(){
+
+    }
+    public makePayment(){
+
+    }
+
 }
