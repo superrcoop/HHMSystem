@@ -49,6 +49,7 @@ public class HHMS{
 
     public static void HHMS_header() {
         //Welcome message
+        System.out.println("Welcome to the Hope Health Medical System");
     }
 
     public static void main(String[] args) throws IOException{
