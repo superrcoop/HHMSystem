@@ -1,0 +1,21 @@
+class prescription{
+
+private  ArrayList prescriptionlist;
+private  String patientid;
+
+public prescription(String patientid){
+  this.patientid=patientid;
+  ArrayList<Drugs> prescriptionlist = new ArrayList <Drugs> ();
+}
+
+public void adddrugs(drugs d){
+  prescriptionlist.add(d);
+}
+    
+public String toString(){
+  for (Visit obj:visitlog){
+    System.out.println(obj);
+  } 
+}
+
+}
