@@ -50,6 +50,7 @@ public class operation {
         //...
     }
 
+
     /**
      * Gets all operation
      * @return all operations

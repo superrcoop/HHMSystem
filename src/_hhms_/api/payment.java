@@ -18,7 +18,7 @@ public class payment {
      * @param Operation
      */
     public payment(operation Operation){
-        this.operation=Operation
+        this.operation=Operation.getOperation();
     }
 
     /**
