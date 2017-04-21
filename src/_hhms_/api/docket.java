@@ -9,54 +9,40 @@ import _hhms_.api.visit;
  */
 public class docket {
 
-    public visit Visit;
+    public ArrayList visitlog;
     public patient Patient;
+    
 
     /**
      * Initialises a docket for a patient in the Medical System
      * @param Patient
      * @param Visit
      */
-    public docket(patient Patient,visit Visit){
+    public docket(patient Patient){
         this.Patient=Patient;
-        this.Visit=Visit;
+        ArrayList<Visit> visitlog = new ArrayList<Visit> ();
     }
 
     /**
      * Gets a patient visit from a docket
      * @return visit
      */
-    public visit getVisit(){
-        return Visit;
+    
+    public void(Visit v){
+        visitlog.add(v);
     }
 
     /**
      * Get a patient from the docket;
      * @return patient
      */
-    public patient getPatient(){
-        return Patient;
+    public patient getPatientdetials(){
+        return Patient.toString();
     }
-
-    /**
-     * Creates a docket in the database
-     */
-    public createDocket(){
-        //implement me
-    }
-
-    /**
-     * Delete a docket from the database
-     */
-    public deleteDocket(){
-        //implement me
-    }
-
-    /**
-     * Update docket in the database
-     */
-    public updateDocket(){
-        //implement me
-    }
-
+    
+   public String toString(){
+        for (Visit obj:visitlog){
+             System.out.println(obj);
+        }
+   }
 }
