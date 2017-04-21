@@ -12,6 +12,6 @@ public class revenue extends log {
      * Logs revenue in the Medical System
      */
     public revenue(Object object){
-        //implement me
+        //...
     }
 }

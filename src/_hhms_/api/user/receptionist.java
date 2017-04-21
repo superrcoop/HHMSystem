@@ -11,9 +11,9 @@ public class receptionist extends user {
     /**
      * Initialises a new receptionist
      */
-    public manager (){
+    public receptionist (){
         this.username="receptionist";
-        this.password="password"
+        this.password="password";
     }
 
 }

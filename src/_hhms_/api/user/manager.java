@@ -13,7 +13,7 @@ public class manager extends user {
      */
     public manager (){
         this.username="admin";
-        this.password="admin"
+        this.password="admin";
     }
 
 }

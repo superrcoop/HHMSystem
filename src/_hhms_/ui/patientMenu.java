@@ -51,7 +51,7 @@ public class patientMenu {
                 String phn_kin = scan.next();
                 System.out.println(" Do you wish to save? y or n");
                 if (scan.next().equalsIgnoreCase("y")) {
-                    patient newPatient = new patient(fname, lname, dob, address, phn, job, name_kin, phn_kin);//new patient object
+                    patient newPatient = new patient(fname, lname);//new patient object
 
                     try {
                         File file = new File("/home/superrcoop/Documents/patients.txt");//create new file object

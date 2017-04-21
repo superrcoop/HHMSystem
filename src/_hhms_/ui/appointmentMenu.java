@@ -2,6 +2,8 @@ package _hhms_.ui;
 
 import _hhms_.api.HHMS;
 import _hhms_.api.appointment;
+import _hhms_.api.visit;
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -55,7 +57,7 @@ public class appointmentMenu {
                                     file.createNewFile();
                                 }
                                 BufferedWriter output = new BufferedWriter(new FileWriter(file));
-                                output.write(App.getApp_Info());
+                                output.write(App.toString());
                                 output.close();
                                 System.out.println("success writing..\n");
                             } catch (IOException e) {
@@ -113,6 +115,8 @@ public class appointmentMenu {
                 switch (opt6) {
                     case 1:
                         System.out.println("===============================Visits===============================");
+                        System.out.print("Pleased enter the patient ID: ");
+                        String id = scan.next();
                         System.out.print("Pleased enter the first name of the patient: ");
                         String fname = scan.next();
                         System.out.print("Pleased enter the last name of the patient: ");
@@ -133,7 +137,7 @@ public class appointmentMenu {
                         String diagn = scan.nextLine();
                         System.out.println("Do you wish to save? y or n ");
                         if (scan.next().equalsIgnoreCase("y")) {
-                            appointment visit = new appointment(fname, lname, BP, w, h, t, doc, conc, diagn);
+                            visit visit=new visit(fname,lname,conc,doc);
                             try {
                                 File file = new File("/home/superrcoop/Documents/visits.txt");
                                 if (!file.exists()) {

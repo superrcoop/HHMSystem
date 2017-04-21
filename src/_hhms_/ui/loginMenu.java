@@ -23,7 +23,7 @@ public class loginMenu{
         HHMS_header();
         System.out.print("1-Receptionist Login \t 2-Manager Login \n" +
                 "-------------------------------------------------------\nUser: ");
-        Scanner scan = new Scanner(System.in);
+        scan = new Scanner(System.in);
         int p = scan.nextInt();
         if (p==1){
             HHMS_header();

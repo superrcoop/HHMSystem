@@ -17,7 +17,7 @@ public class user {
      */
     public user (){
         this.username="user";
-        this.password="user"
+        this.password="user";
     }
     /**
      * Gets the user's username

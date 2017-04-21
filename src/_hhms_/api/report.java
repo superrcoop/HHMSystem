@@ -1,4 +1,4 @@
-package _hhms_;
+package _hhms_.api;
 
 /**
  * A class representing a report Gerneration in the medical system.
@@ -52,7 +52,7 @@ public class report {
     /**
      * Creates a report and write to a file
      */
-    public createReport(){
+    public void createReport(){
         //implement me
     }
 
@@ -63,6 +63,6 @@ public class report {
      */
     @Override
     public String toString(){
-        return nameOfReport+ "      " + dateOfReport+"     " + revenueCollected ;
+        return nameOfReport+ "\t\t" + dateOfReport+"\t\t" + revenueCollected ;
     }
 }

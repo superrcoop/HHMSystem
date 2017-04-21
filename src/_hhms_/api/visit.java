@@ -6,42 +6,136 @@ package _hhms_.api;
  * @version 0.2.1
  */
 public class visit {
-    private String patientid;
+    private String patientId;
     private Double patientBP;
     private Double weight;
     private Double height;
     private Double temp;
     private String doc;
-    private String concern;
-    private String diagnosis;
-    private Prescription prescription;
+    private String comments;
+    private String operation;
+    private String medicalCon;
+    private String Prescription;
 
     /**
      * Initialises a patient visit in the Medical system
-     * @param fname
-     * @param lname
      * @param patientBP
      * @param weight
      * @param height
      * @param temp
      * @param doc
-     * @param concern
-     * @param diagnosis
+     * @param medicalCon
+     * @param operation
      */
-    public visit(String patientid, Double patientBP, Double weight, Double height, Double temp, String doc,
-                       String concern, String diagnosis,Prescription prescriptionid){
+    public visit(String patientId, Double patientBP, Double weight, Double height, Double temp, String doc,
+                       String medicalCon, String operation){
         this.patientBP=patientBP;
         this.weight=weight;
         this.height=height;
         this.temp=temp;
         this.doc=doc;
-        this.concern=concern;
-        this.diagnosis=diagnosis;
-        this.prescription=prescription;
+        this.comments=comments;
+        this.patientId=patientId;
+        this.medicalCon=medicalCon;
+        this.operation=operation;
     }
-    
+
+    /**
+     * Initialises a visit with basic details in the Medical System
+     * @param patientId
+     * @param doc
+     * @param medicalCon
+     * @param operation
+     */
+    public visit(String patientId, String doc,
+                 String medicalCon, String operation){
+        this.patientId=patientId;
+        this.operation=operation;
+        this.medicalCon=medicalCon;
+        this.doc=doc;
+    }
+
+    /**
+     * Sets a patient prescription
+     */
+    public void setPrescription(){
+        //...
+    }
+
+    /**
+     *Get prescription details
+     * @param Prescription
+     */
+    public void getPrescription(prescription Prescription){
+        this.Prescription=Prescription.toString();
+    }
+
+    /**
+     * Sets a patient Bloodpressure
+     */
+    public void setPatientBP(){
+        //...
+    }
+
+    /**
+     * Sets a patient weight
+     */
+    public void setWeight(){
+        //...
+    }
+
+    /**
+     * Sets a patient height
+     */
+    public void setHeight(){
+        //...
+    }
+
+    /**
+     * Sets a patient temp
+     */
+    public void setTemp(){
+        //...
+    }
+
+    /**
+     * Get doctor
+     * @return doctor
+     */
+    public String getDoc(){
+        return doc;
+    }
+
+    /**
+     * Set patient Doctor
+     */
+    public void setDoc(String doc){
+        this.doc=doc;
+    }
+
+    /**
+     * Get a patient operation
+     */
+    public String getOperation(){
+        return operation;
+    }
+
+    /**
+     * Add operation to visit
+     * @param operation
+     */
+    public void addOperation(String operation){
+        //...
+    }
+
+    /**
+     *
+     * @return
+     */
+    @Override
     public String toString(){
-        return patientid+" "+patientBP+" "+weight+" "+height+" "+temp+" "+doc" "+concern+" "+diagnosis+" "+prescription.toString();
+            //convert all variables to String
+        return "";
     }  
 
 }

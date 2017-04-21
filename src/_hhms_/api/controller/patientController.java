@@ -24,7 +24,7 @@ public class patientController {
      * Get a patient
      * @return patient
      */
-    public getPatient(){
+    public patient getPatient(){
         return Patient;
     }
 
@@ -32,26 +32,37 @@ public class patientController {
      * Gets a patient docket
      * @return docket
      */
-    public getDocket(){
-        //implement me
+    public void getDocket(){
+        //...
     }
 
     /**
      * Add patient to register
      *
      */
-    public addToRegister(){
-        //implement me
+    public void addToRegister(){
+        //...
     }
 
-    public scheduleAppointment(){
-
+    /**
+     * Schedules an appointment for a patient
+     */
+    public void scheduleAppointment(){
+        //...
     }
-    public cancelAppointment(){
 
+    /**
+     * Cancel an appointment
+     */
+    public void cancelAppointment(){
+        //...
     }
-    public makePayment(){
 
+    /**
+     * Initiates a new payment
+     */
+    public void makePayment(){
+        //...
     }
 
 }

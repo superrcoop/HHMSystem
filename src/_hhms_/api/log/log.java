@@ -10,27 +10,26 @@ public class log {
     public Object object;
     /**
      * Logs activity in database
-     * @param object
      */
-    public log(Object object){
-        //implement me
+    public log(){
+        //...
     }
 
     /**
      * Gets the date and time to be logged
      * @return date and time
      */
-    public getDateTime(){
-        //implement me
+    public void getDateTime(){
+        //...
     }
 
     /**
-     * Overrides the toString method to return a string containing the payment details.
-     * Used to populate the payments contained in the Hope Health medical Solutions.
-     * @return payment details
+     * Overrides the toString method to return a string containing the log details.
+     * Used to populate the log contained in the Hope Health medical Solutions.
+     * @return log details
      */
     @Override
     public String toString(){
-        return object.toString()
+        return "";
     }
 }

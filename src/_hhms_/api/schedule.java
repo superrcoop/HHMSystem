@@ -26,7 +26,7 @@ public class schedule {
      * write to a file
      */
     public void createSchedule(){
-        //implement me
+        //...
     }
 
     /**
@@ -39,21 +39,21 @@ public class schedule {
         this.time=time;
         this.status=status;
 
-        //implement me
+        //...
     }
 
     /**
      * removes a patient from the scedule
      */
     public void removePatient(String fname,String lname){
-        //implement me
+        //...
     }
 
     /**
      * Update patient status
      */
     public void updateStatus(String fname,String lname,String status){
-        //implement me
+        //...
     }
 
     /**
@@ -63,6 +63,6 @@ public class schedule {
      */
     @Override
     public String toString(){
-        return schedule
+        return "";
     }
 }
