@@ -12,50 +12,51 @@ public class appointment {
 
     private String appDate;
     private String appTime;
+    private String patientid;
     private String doc;
-    private String visitDate;
-    private String visitTime;
-    private Double BloodPr;
-    private Double weight;
-    private Double height;
-    private Double temp;
-    private String concern;
-    private String diagnosis;
-    private String drug;
-    private String drugRefill;
-
+    private String reason;
 
     /**
      * Initialises an appointment
-     * @param fname
-     * @param lname
+     * @param patientid
      * @param appDate;
      * @param appTime;
      * @param doc
      */
-    public appointment(String fname, String lname, String appDate, String appTime, String doc){
-
-        super(fname,lname);
+    public appointment(String patienid, String appDate,String reason, String appTime, String doc){
+        this.patientid=patientid;
+        this.reason=reason;
         this.appDate=appDate;
         this.appTime=appTime;
         this.doc=doc;
-
     }
 
     /**
-     * Sets appointment time
+     * reschedule appointment time
      * @param newAppTime
      */
-    public void setApp_Time (String newAppTime){
-        appTime=newAppTime;
+    public void reschApp_Time (String newAppTime){
+        this.appTime=newAppTime;
     }
 
     /**
-     * Set appointment date
+     * reschedule appointment date
      * @param newAppDate
      */
-    public void setApp_date(String newAppDate){
-        appDate=newAppDate;
+    public void reschApp_date(String newAppDate){
+        this.appDate=newAppDate;
+    }
+    
+    public String getreason(){
+        return this.reason;
+    }
+    
+    public String getappDate(){
+        return this.appDate;
+    }
+    
+    public String getappTime(){
+        return this.appTime;
     }
 
     /**
@@ -81,17 +82,6 @@ public class appointment {
         }
 
     }
-
-    /**
-     * Set prescription
-     * @param drug
-     * @param drugRefill
-     */
-    public void setPrescription(String drug,String drugRefill){
-        this.drug=drug;
-        this.drugRefill=drugRefill;
-    }
-
     /**
      * Overrides the toString method to return a string containing the appointment details.
      * Used to populate the appointments contained in the Hope Health medical Solutions.
@@ -99,6 +89,6 @@ public class appointment {
      */
     @Override
     public String toString(){
-        return fname+" "+lname+"          "+ BloodPr+"      "+ weight+"       "+height+"        "+temp+"         "+ doc+ "     "+ concern+"      "+ diagnosis ;
+        return patientid+" "+appDate+"          "+appTime+"      "+ reason+"       "+doc;
     }
 }
