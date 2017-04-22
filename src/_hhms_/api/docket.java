@@ -11,7 +11,7 @@ import java.util.ArrayList;
  */
 public class docket {
 
-    public ArrayList visitlog;
+    //public ArrayList visitlog;
     public patient Patient;
 
     /**
@@ -20,7 +20,6 @@ public class docket {
      */
     public docket(patient Patient){
         this.Patient=Patient;
-        ArrayList<visit> visitlog = new ArrayList<visit> ();
     }
 
     /**
@@ -28,7 +27,7 @@ public class docket {
      * @return visit
      */
     public void addVisit(visit v){
-        visitlog.add(v);
+        //visitlog.add(v);
     }
 
     /**
