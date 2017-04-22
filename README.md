@@ -60,13 +60,13 @@ $ cd HHMSystem/
 ```
 Compile,create `.jar` file and run:
 ```
-$ javac /src/_hhms_/*.java
+$ javac /src/_hhms_/$(find . -name "*.java")
 ```
 ```
-$ jar cvfm HHMS.jar src/META-INF/MANIFEST.MF src/_hhms_/*.class
+$ jar vcfm HHMS.jar src/META-INF/MANIFEST.MF src/_hhms_/$(find . -name "*.class")
 ```
 ```
-$ java -jar src/HHMS.jar
+$ java -jar HHMS.jar
 ```
 
 ### Contributing
