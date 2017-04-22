@@ -9,7 +9,7 @@ import java.util.*;
  */
 public class prescription{
 
-  private ArrayList prescriptionlist;
+  private String prescriptionlist;
   private  String id;
   private String DRUG;
 
@@ -19,7 +19,6 @@ public class prescription{
    */
   public prescription(patient Patient){
   this.id=Patient.getpatientID();
-  ArrayList<String> prescriptionlist = new ArrayList <String> ();
   }
 
   /**
@@ -27,7 +26,7 @@ public class prescription{
    * @param Drug
    */
   public void addDrug(String Drug){
-  prescriptionlist.add(Drug);
+
 }
 
 
